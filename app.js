@@ -8,4 +8,10 @@ app.use(express.json());
 
 app.use('/api/players', playerRouter);
 
+app.get('/', async (request, response) => {
+    
+    response.set('Content-Type', 'text/html');
+    response.send(Buffer.from('<h2>hello world</h2>'));
+})
+
 module.exports = app;
