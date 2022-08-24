@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const playerRouter = require('./controllers/playerRouter');
+const summonerRouter = require('./controllers/summonerRouter');
 
 app.use(cors());
 app.use(express.json());
 
 app.use('/api/players', playerRouter);
+app.use('/api/summoners', summonerRouter);
 
 app.get('/', async (request, response) => {
     
