@@ -13,7 +13,7 @@ playerRouter.get('/:name', async (request, response) => {
         .then(result => {
             response.status(200).json(result.data);
         })
-        .catch(error => console.log(error));
+        .catch(error => response.status(500).json({error: error}));
 })
 
 module.exports = playerRouter;
