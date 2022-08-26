@@ -15,7 +15,6 @@ matchIdRouter.get('/:puuid', async (request, response) => {
             response.status(200).json(result.data);
         })
         .catch(error => response.status(500).json({error: error}));
-
 })
 
 module.exports = matchIdRouter;
